@@ -19,11 +19,19 @@ int main()
 {
     vector<vector<char>> board;
     initializeBoard(board);
+    cout << "Player 1 is 'X'." << endl
+         << "Player 2 is 'O" << endl
+         << endl;
     printBoard(board);
     for (int i = 0; i < 9 && !results(board); i++)
     {
         gameInput((i % 2) + 1, board);
         printBoard(board);
+        if (i == 8 && !results(board))
+        {
+            cout << "The Game is a Draw!" << endl;
+            break;
+        }
     }
     return 0;
 }
