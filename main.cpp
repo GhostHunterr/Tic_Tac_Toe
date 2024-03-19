@@ -1,4 +1,5 @@
 #include <iostream>
+#include <Windows.h>
 #include <vector>
 
 using namespace std;
@@ -29,7 +30,9 @@ int main()
         printBoard(board);
         if (i == 8 && !results(board))
         {
-            cout << "The Game is a Draw!" << endl;
+            wstring message = L"The Game is a Draw!";
+            wstring title = L"DRAW";
+            MessageBoxW(NULL, message.c_str(), title.c_str(), MB_OK);
             break;
         }
     }
@@ -57,13 +60,17 @@ bool results(vector<vector<char>> &board)
     {
         if ((board[i][0] == player && board[i][1] == player && board[i][2] == player) || (board[0][i] == player && board[1][i] == player && board[2][i] == player))
         {
-            cout << "Player 1, has Won!" << endl;
+            wstring message = L"Player 1, has Won!";
+            wstring title = L"WINNER";
+            MessageBoxW(NULL, message.c_str(), title.c_str(), MB_OK);
             return true;
         }
     }
     if ((board[0][0] == player && board[1][1] == player && board[2][2] == player) || (board[0][2] == player && board[1][1] == player && board[2][0] == player))
     {
-        cout << "Player 1, has Won!" << endl;
+        wstring message = L"Player 1, has Won!";
+        wstring title = L"WINNER";
+        MessageBoxW(NULL, message.c_str(), title.c_str(), MB_OK);
         return true;
     }
 
@@ -72,13 +79,17 @@ bool results(vector<vector<char>> &board)
     {
         if ((board[i][0] == player && board[i][1] == player && board[i][2] == player) || (board[0][i] == player && board[1][i] == player && board[2][i] == player))
         {
-            cout << "Player 2, has Won!" << endl;
+            wstring message = L"Player 2, has Won!";
+            wstring title = L"WINNER";
+            MessageBoxW(NULL, message.c_str(), title.c_str(), MB_OK);
             return true;
         }
     }
     if ((board[0][0] == player && board[1][1] == player && board[2][2] == player) || (board[0][2] == player && board[1][1] == player && board[2][0] == player))
     {
-        cout << "Player 2, has Won!" << endl;
+        wstring message = L"Player 2, has Won!";
+        wstring title = L"WINNER";
+        MessageBoxW(NULL, message.c_str(), title.c_str(), MB_OK);
         return true;
     }
 
