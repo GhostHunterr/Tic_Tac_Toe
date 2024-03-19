@@ -21,5 +21,5 @@ This is a simple command-line Tic Tac Toe game implemented in C++. It allows two
 ## How to Compile and Run?
 Use the following command to compile and then run the executable file.
 ```
-g++ tictactoe.cpp -o tictactoe
+g++ main.cpp -o tictactoe
 ```
