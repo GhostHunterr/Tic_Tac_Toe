@@ -18,3 +18,8 @@ This is a simple command-line Tic Tac Toe game implemented in C++. It allows two
 - Win detection for both players.
 - Displays a message box using the Windows API to announce the winner or a draw.
 
+## How to Compile and Run?
+Use the following command to compile and then run the executable file.
+```
+g++ tictactoe.cpp -o tictactoe
+```
